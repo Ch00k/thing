@@ -9,6 +9,7 @@ plugins {
     kotlin("plugin.spring") version "1.8.22"
     kotlin("plugin.jpa") version "1.8.22"
     kotlin("plugin.allopen") version "1.9.0"
+    application
 }
 
 group = "my.thingservice"
