@@ -1,0 +1,16 @@
+name: thing
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    ports:
+      - 127.0.0.1:3396:3306
+    volumes:
+      - ./docker/mysql:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: mysqladmin ping
+      interval: 1s
+      timeout: 30s
+      retries: 15
